@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime number</title>
+</head>
+<body>
+  <script>
+    let amount = +prompt('Enter amount of prime number:');
+    let count = 1;
+    let pN = 'true';
+    let j =1;
+    // let text ="";
+
+    function test(i){
+        for (let j = 3; j < i; j+=2){
+            if ( i % j == 0) {
+                pN = 'false';
+                break;
+            } {
+                // console.log(i);
+                pN = 'true';
+                break;
+            }
+        }
+    };
+
+    switch (amount) {
+      case 0:
+        document.body.innerHTML = "No prime number";
+        break;
+      case 1:
+        document.body.innerHTML = "2";
+        break;
+      default:
+        {
+           for (let i= 3; count < amount; i+=2){
+               test(i);
+               if (pN == 'true') {
+                   console.log(i)
+                   count++;
+               }
+           }
+        }
+
+    };
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

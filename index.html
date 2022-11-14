@@ -7,9 +7,8 @@
 <body>
   <script>
     let amount = +prompt('Enter amount of prime number:');
-    let count = 1;
+    let count = 2;
     let pN = 'false';
-    let text ="";
 
     function test(i){
         for (let j = 3; j < i; j+=2){
@@ -20,7 +19,6 @@
                 pN = 'true';
         }
     };
-
 
     switch (amount) {
       case 0:
@@ -33,7 +31,7 @@
         {
             console.log(2);
             console.log(3);
-           for (let i= 3; count <= amount; i+=2){
+            for (let i= 3; count <amount; i+=2){
                test(i);
                if (pN === 'true') {
                    console.log(i)

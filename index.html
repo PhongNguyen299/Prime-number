@@ -8,22 +8,19 @@
   <script>
     let amount = +prompt('Enter amount of prime number:');
     let count = 1;
-    let pN = 'true';
-    let j =1;
-    // let text ="";
+    let pN = 'false';
+    let text ="";
 
     function test(i){
         for (let j = 3; j < i; j+=2){
-            if ( i % j == 0) {
+            if ( i % j === 0) {
                 pN = 'false';
                 break;
-            } {
-                // console.log(i);
-                pN = 'true';
-                break;
             }
+                pN = 'true';
         }
     };
+
 
     switch (amount) {
       case 0:
@@ -34,26 +31,17 @@
         break;
       default:
         {
-           for (let i= 3; count < amount; i+=2){
+            console.log(2);
+            console.log(3);
+           for (let i= 3; count <= amount; i+=2){
                test(i);
-               if (pN == 'true') {
+               if (pN === 'true') {
                    console.log(i)
                    count++;
                }
            }
         }
-
     };
-
-
-
-
-
-
-
-
-
-
   </script>
 </body>
 </html>
